@@ -1,17 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Form from './Components/Form/Form';
-import Lists from './Components/Lists/Lists';
+import './App.css';
 
 function App(props) {
-  const [data, setData] = useState();
-
-  // console.log(data);
-
   return (
     <React.Fragment>
-      <h1>React Todo App with Reducer</h1>
-      <Form data={setData} />
-      <Lists data={data} />
+      <Form />
     </React.Fragment>
   );
 }

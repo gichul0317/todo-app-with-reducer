@@ -1,0 +1,28 @@
+.lists {
+  margin: 20px 0;
+  border: 1px solid;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.lists span {
+  font-size: 32px;
+  font-weight: 400;
+  padding: 1rem;
+}
+
+.lists button {
+  background-color: transparent;
+  border-radius: 5px;
+  padding: 5px 12px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.check {
+  color: #aaa;
+}
+
+.uncheck {
+  color: #000;
+}
