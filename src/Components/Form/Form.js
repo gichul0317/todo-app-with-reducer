@@ -1,4 +1,4 @@
-import React, { useReducer, useState } from 'react';
+import React, { useEffect, useReducer, useState } from 'react';
 
 function reducer(state, action) {
   if (action.type === 'add') {
@@ -17,13 +17,16 @@ function Form(props) {
   const [todos, dispatchTodos] = useReducer(reducer, []);
   const [text, setText] = useState('');
 
+  useEffect(() => {
+    props.data(todos);
+  }, [todos]);
+
   const submitHandler = (e) => {
     e.preventDefault();
     if (text.trim().length === 0) {
       return;
     }
     dispatchTodos({ type: 'add', payload: { name: text } });
-    props.data(todos);
     setText('');
   };
 
