@@ -1,4 +1,4 @@
-import React, { useReducer, useState } from 'react';
+import React, { useEffect, useReducer, useRef, useState } from 'react';
 import styles from './Form.module.css';
 import Lists from '../Lists/Lists';
 
@@ -27,6 +27,11 @@ function newTodo(name) {
 function Form(props) {
   const [todos, dispatchTodos] = useReducer(reducer, []);
   const [text, setText] = useState('');
+  const inputRef = useRef(null);
+
+  useEffect(() => {
+    inputRef.current.focus();
+  }, []);
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -39,13 +44,14 @@ function Form(props) {
 
   return (
     <div className={styles.container}>
-      <h1>React Todo App with Reducer</h1>
+      <h1>What's your todos?</h1>
       <form className={styles.form} onSubmit={submitHandler}>
         <input
           type="text"
           value={text}
           onChange={(e) => setText(e.target.value)}
           placeholder="Enter your todos.."
+          ref={inputRef}
         />
         <button type="submit">Add Todos</button>
       </form>
