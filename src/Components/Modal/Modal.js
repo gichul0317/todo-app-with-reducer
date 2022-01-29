@@ -4,15 +4,15 @@ import styles from './Modal.module.css';
 
 function Modal(props) {
   return (
-    <Overlay>
+    <Overlay onClose={props.onClose}>
       <div className={styles.modal}>
         <h3>React hooks used are including:</h3>
         <p>
-          useState, useRef, useReducer, useEffect, portals(rendering DOM) and
+          useState, useRef, useReducer, useEffect, portals (rendering DOM) and
           CSS modules
         </p>
         <p>Developed by Gichul Jaun, 2022</p>
-        <button>Close Modal</button>
+        <button onClick={props.onClose}>Close Modal</button>
       </div>
     </Overlay>
   );
