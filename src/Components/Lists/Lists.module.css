@@ -45,3 +45,21 @@
 .uncheck {
   color: #fff;
 }
+
+@media (max-width: 767px) {
+  .lists {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .lists span {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .lists button {
+    margin-right: 0;
+    margin-bottom: 10px;
+    font-size: 22px;
+  }
+}

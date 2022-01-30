@@ -30,3 +30,17 @@ button:active {
   background-color: #161a2b;
   color: #fff;
 }
+
+@media (max-width: 767px) {
+  .modal h3 {
+    font-size: 32px;
+  }
+
+  .modal p {
+    font-size: 22px;
+  }
+
+  .modal button {
+    font-size: 22px;
+  }
+}

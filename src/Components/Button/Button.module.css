@@ -19,3 +19,9 @@
 .button:active {
   background-color: rgba(100, 115, 255, 1);
 }
+
+@media (max-width: 767px) {
+  .button {
+    font-size: 22px;
+  }
+}

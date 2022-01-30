@@ -59,3 +59,29 @@ ul {
 ul p {
   color: #fff;
 }
+
+@media (max-width: 767px) {
+  .container {
+    height: 800px;
+  }
+
+  h1 {
+    font-size: 42px;
+  }
+
+  .form {
+    flex-direction: column;
+  }
+
+  .form button {
+    margin-top: 15px;
+  }
+
+  ul {
+    margin-top: 35px;
+  }
+
+  ul p {
+    font-size: 22px;
+  }
+}
