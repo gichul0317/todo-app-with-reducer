@@ -44,6 +44,12 @@ h1 {
   background-color: #0c51ff;
   color: #fff;
   text-transform: capitalize;
+  transition: background-color 300ms ease;
+}
+
+.form button:hover,
+.form button:active {
+  background-color: #052067;
 }
 
 ul {
