@@ -44,7 +44,7 @@ function Form(props) {
 
   return (
     <div className={styles.container}>
-      <h1>What's your todos?</h1>
+      <h1>What's your to-dos?</h1>
       <form className={styles.form} onSubmit={submitHandler}>
         <input
           type="text"
@@ -53,7 +53,7 @@ function Form(props) {
           placeholder="Enter your todos.."
           ref={inputRef}
         />
-        <button type="submit">Add Todos</button>
+        <button type="submit">Add To-dos</button>
       </form>
       <ul>
         {todos.length !== 0 ? (
@@ -61,7 +61,7 @@ function Form(props) {
             return <Lists key={item.id} todo={item} dispatch={dispatchTodos} />;
           })
         ) : (
-          <p>No Todos...😢 Please Add!😎</p>
+          <p>No To-Dos...😢 Please Add!😎</p>
         )}
       </ul>
     </div>
