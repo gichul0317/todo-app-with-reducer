@@ -25,6 +25,7 @@
 
 @media (max-width: 767px) {
   .overlay {
+    top: 15vh;
     width: 100%;
   }
 }
